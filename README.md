@@ -1,0 +1,6 @@
+
+# geo-region
+
+This is a java micro libary that can take a list of geographical regions defined in a text file and output that to any format you need.  The output format is dependent upon a class that implements ```GeoRegionOutputGenerator```.  I found that several times, I have a need to perform a lookup of a U.S. state/province abbreviation and get the name of the state or vice versa, where I have the name of the state but I need the abbreviation.  It would be nice to quickly be able to get a data structure, with information preloaded.  There is a implementation of ```GeoRegionOutputGenerator```, ```JavaGetAbbreviationMapOutputGeneratorImpl```, that generates a java ```Map<String, String>``` where the key is a region abbrevation or name and the value is the region abbreviation.  Another potential output implementation could be a JSON mapped list of the regions.
+
+Results are sent to the ```output``` folder and the input text files are located in ```src/main/resources```.  Currently, all U.S. states and territories are included, but feel free to add your countries provinces.
